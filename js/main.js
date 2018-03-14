@@ -44,10 +44,13 @@ let turn = 0;
 
 for(let i=0; i<game.length; i++) {
   game[i].onclick = function() {
-    if(turn % 2 == 0 ) {     //alternate turns between players
+    if (this.innerHTML != ""){
+      alert("pick another box"); //to stop duplicate squares picked
+      return;
+    } else if(turn % 2 == 0 ) {     //alternate turns between players
       this.innerHTML = "X"; // &#128034;
       //$( "div.demo-container" ).html() doing via jquery. how to set image?
-    } if(turn % 2 != 0) {
+    } else if(turn % 2 !== 0) {
       this.innerHTML = "O";    //	&#128007;
     }
     this.setAttribute('disabled', 'disabled');
@@ -67,7 +70,6 @@ function checkWinner() {
     	(game[0].innerText == "X" && game[4].innerText == "X" && game[8].innerText == "X") ||
       (game[2].innerText == "X" && game[4].innerText == "X" && game[6].innerText == "X") ) {
     		alert("X wins");
-        
   } if(
       (game[0].innerText == "O" && game[1].innerText == "O" && game[2].innerText == "O") ||
     	(game[3].innerText == "O" && game[4].innerText == "O" && game[5].innerText == "O") ||
@@ -78,11 +80,9 @@ function checkWinner() {
     	(game[0].innerText == "O" && game[4].innerText == "O" && game[8].innerText == "O") ||
       (game[2].innerText == "O" && game[4].innerText == "O" && game[6].innerText == "O") ) {
     		alert("O wins");
-
-  } if(turn == 9) {
+  } else if(turn == 9) {
         alert("draw");
   }
 }
-
 
 $('.gameboard').addClass('animated bounceInLeft');
