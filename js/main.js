@@ -29,21 +29,33 @@ game positions = ["0", "1","2",
 */
 
 let game  = document.querySelectorAll('div.gameboard');
+let rematch = document.getElementById('rematch');
+
+//rematch button
+rematch.onclick = function() {
+  for(var i=0; i<game.length; i++) {
+      game[i].innerHTML = "";
+      game[i].removeAttribute('disabled');
+    	turn = 0;
+	}
+}
+
 let turn = 0;
 
 for(let i=0; i<game.length; i++) {
   game[i].onclick = function() {
     if(turn % 2 == 0 ) {     //alternate turns between players
-      this.innerHTML = "X";
+      this.innerHTML = "X"; // &#128034;
       //$( "div.demo-container" ).html() doing via jquery. how to set image?
-    } else {
-      this.innerHTML = "O";
+    } if(turn % 2 != 0) {
+      this.innerHTML = "O";    //	&#128007;
     }
     this.setAttribute('disabled', 'disabled');
     turn++;
     checkWinner();
   }
-}
+  }
+
 function checkWinner() {
   if(
       (game[0].innerText == "X" && game[1].innerText == "X" && game[2].innerText == "X") ||
@@ -55,7 +67,7 @@ function checkWinner() {
     	(game[0].innerText == "X" && game[4].innerText == "X" && game[8].innerText == "X") ||
       (game[2].innerText == "X" && game[4].innerText == "X" && game[6].innerText == "X") ) {
     		alert("X wins");
-
+        
   } if(
       (game[0].innerText == "O" && game[1].innerText == "O" && game[2].innerText == "O") ||
     	(game[3].innerText == "O" && game[4].innerText == "O" && game[5].innerText == "O") ||
@@ -66,5 +78,11 @@ function checkWinner() {
     	(game[0].innerText == "O" && game[4].innerText == "O" && game[8].innerText == "O") ||
       (game[2].innerText == "O" && game[4].innerText == "O" && game[6].innerText == "O") ) {
     		alert("O wins");
+
+  } if(turn == 9) {
+        alert("draw");
+  }
 }
-}
+
+
+$('.gameboard').addClass('animated bounceInLeft');
