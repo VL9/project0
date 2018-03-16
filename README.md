@@ -1,52 +1,17 @@
 # Project 0
 
-## Subheadings
+A simple TicTacToe game using some HTML, CSS and Javascript. Do you have what it takes to win it all?
 
-### Subheadings
+## Installation
 
-Some **regular** ***text***.
+Run it off your chrome browser.
 
-Some *more* regular text.
+## Usage
 
-This is a _new_ paragraph.
+Each player takes a turn. First to three wins the match. Rematch will allow you to reset the game for hours and hours of fun..
 
-## lists
+## Credits
 
-* list items
-* second items
-  * sub item
-  * sub item 2
+Shoutout to GA staff and classmates for their help.
 
-### Marx Brothers
-1. Groucho
-1. Harpo
-3. Chico  
-
-![bill murray alt](http://fillmurray.com/50/70)
-
-http://twitter.com
-
-[Twitter](http://twitter.com/)
-
-To quote someone famous:
-> Famous inspirational quote
-
-Or not
-
-You should use the ``<section>`` tag.
-
-There are two many variables called `score` in this project.
-
-## GitHub Flavoured Markdown
-
-### Function expression example
-
-```javaScript
-const sayHello = function () {
-  console.log('Hello!');
-}
-```
-
-@tagSomeoneOnGitHub
-
-~~this is struck out~~
+## License

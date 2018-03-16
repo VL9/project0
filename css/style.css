@@ -9,19 +9,33 @@ body {
 
 h1{
   font-size: 50px;
+  font-family: 'Stalinist One', cursive;
 }
 
 button{
   margin-top: 20px;
   font-size: 30px;
   border-radius: 15px;
+  border-width: 5px;
+  color: grey;
+  font-family: 'Stalinist One', cursive;
 }
 div.container{
   padding: 30px;
+  margin-bottom: 30px;
 }
-
+div.result{
+  text-align: center;
+  width: 400px;
+  height:60px;
+  margin: auto;
+  font-size: 30px;
+  color: white;
+  vertical-align: middle;
+  font-family: 'Stalinist One', cursive;
+}
 div.gameboard {
-  font-size: 120px;
+  font-size: 100px;
   display: inline-block;
   width: 150px;
   height: 150px;
@@ -30,6 +44,41 @@ div.gameboard {
   border-radius: 20px;
   vertical-align: middle;
   line-height: 150px;
-  background-color: silver;
+  background-color: ;
   color: teal;
+  font-family: 'Press Start 2P', cursive;
+  /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite;
+
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+
+  /* Standar Syntax */
+  animation: rainbow 1s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
 }
